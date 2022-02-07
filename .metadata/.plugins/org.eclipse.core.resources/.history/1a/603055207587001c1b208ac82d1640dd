@@ -1,0 +1,9 @@
+package study.demo.basic;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet(name= "helloServlet" , urlPatterns = "/hello")
+public class helloServlet extends HttpServlet {
+
+}

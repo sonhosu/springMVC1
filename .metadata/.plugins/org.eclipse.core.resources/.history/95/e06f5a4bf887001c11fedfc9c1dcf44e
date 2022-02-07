@@ -1,0 +1,30 @@
+package study.demo.basic.request;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name=" requestHeaderServlet", urlPatterns = "/request-header")
+public class RequestHeaderServlet extends HttpServlet {
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String method=req.getMethod();
+		String pro=req.getProtocol();
+		String scheme=req.getScheme();
+		String queryString= req.getQueryString();
+		
+		System.out.println("method=="+method);
+		System.out.println("protocal=="+pro);
+		System.out.println("scheme=="+scheme);
+		System.out.println("queryString=="+queryString);
+		
+
+	}
+
+	
+}
